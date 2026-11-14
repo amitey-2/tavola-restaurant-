@@ -1,18 +1,17 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TAVOLA — Authentic Italian food, handmade pasta and wood-fired pizza.">
+  <meta name="description" content="TAVOLA — Handmade pasta, wood-fired pizza and authentic Italian hospitality.">
   <meta name="theme-color" content="#171713">
 
   <title>TAVOLA | An Italian Table</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
@@ -21,7 +20,7 @@
 <body>
 
   <header class="header">
-    <a href="#" class="logo">TAVOLA<span>.</span></a>
+    <a href="#home" class="logo">TAVOLA<span>.</span></a>
 
     <nav class="nav" id="nav">
       <a href="#home">Home</a>
@@ -29,9 +28,10 @@
       <a href="#menu">Menu</a>
       <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
+      <a href="#reservation" class="mobile-book">Book a Table ↗</a>
     </nav>
 
-    <a href="#reservation" class="header-button">Book a Table</a>
+    <a href="#reservation" class="header-button">Book a Table ↗</a>
 
     <button class="menu-toggle" id="menuToggle"
       aria-label="Open navigation" aria-expanded="false">
@@ -40,6 +40,8 @@
   </header>
 
   <main>
+
+    <!-- HERO -->
 
     <section class="hero" id="home">
       <div class="hero-content">
@@ -57,21 +59,28 @@
 
         <div class="hero-actions">
           <a href="#menu" class="button button-primary">Explore Menu</a>
-          <a href="#story" class="button button-outline">Discover Our Story</a>
+          <a href="#story" class="button button-outline">Our Story</a>
+        </div>
+
+        <div class="hero-note">
+          <span class="note-line"></span>
+          <span>MADE WITH LOVE, SERVED WITH SOUL.</span>
         </div>
       </div>
 
       <div class="hero-image">
-        <img src="Images/hero-pasta.jpg"
-          alt="Fresh Italian pasta served at TAVOLA">
-        <span class="image-caption">MADE WITH LOVE, SERVED WITH SOUL.</span>
+        <img src="Images/hero-pasta.jpg" alt="Fresh Italian pasta">
+        <div class="image-tag">A TASTE OF ITALY</div>
       </div>
 
       <div class="hero-bottom">
         <span>AUTHENTIC ITALIAN CUISINE</span>
         <span>EST. 2026</span>
+        <span>ABU DHABI, UAE</span>
       </div>
     </section>
+
+    <!-- STORY -->
 
     <section class="story section" id="story">
       <div class="section-label">01 / OUR STORY</div>
@@ -89,14 +98,23 @@
             we bring together honest ingredients, traditional
             techniques and a love for sharing food.
           </p>
+
           <p>
             From freshly rolled pasta to pizza baked in a blazing
             oven, every dish tells a story.
           </p>
+
           <a href="#menu" class="text-link">Discover our menu ↗</a>
         </div>
       </div>
+
+      <div class="story-image">
+        <img src="Images/restaurant.jpg" alt="Warm Italian restaurant interior">
+        <span>LA BELLEZZA DELLA SEMPLICITÀ</span>
+      </div>
     </section>
+
+    <!-- MENU -->
 
     <section class="menu-section section" id="menu">
       <div class="section-label">02 / THE MENU</div>
@@ -106,6 +124,7 @@
           <p class="eyebrow">FRESH FROM OUR KITCHEN</p>
           <h2>Made to be <em>shared.</em></h2>
         </div>
+
         <p>Simple ingredients. Beautiful flavours.</p>
       </div>
 
@@ -187,36 +206,115 @@
       </div>
     </section>
 
+    <!-- QUOTE -->
+
+    <section class="quote-section">
+      <p class="eyebrow">IL PIACERE DELLA TAVOLA</p>
+      <h2>"The fondest memories are made<br>when gathered around <em>the table.</em>"</h2>
+    </section>
+
+    <!-- GALLERY -->
+
     <section class="gallery section" id="gallery">
       <div class="section-label">03 / THE ATMOSPHERE</div>
 
       <div class="section-heading">
         <h2>A seat at <em>our table.</em></h2>
+        <p>A glimpse into our little corner of Italy.</p>
       </div>
 
       <div class="gallery-grid">
-        <img src="Images/gallery-one.jpg" alt="Italian restaurant dining">
+        <img src="Images/gallery-one.jpg" alt="Italian dining experience">
         <img src="Images/gallery-two.jpg" alt="Fresh Italian ingredients">
         <img src="Images/gallery-three.jpg" alt="Italian food preparation">
       </div>
     </section>
 
+    <!-- RESERVATION -->
+
     <section class="reservation section" id="reservation">
-      <p class="eyebrow">YOUR TABLE IS WAITING</p>
-      <h2>Let's make it<br><em>a beautiful evening.</em></h2>
-      <p>Good food tastes even better together.</p>
-      <a href="#contact" class="button button-primary">Reserve Your Table</a>
+      <div class="section-label">04 / RESERVATIONS</div>
+
+      <div class="reservation-content">
+        <div class="reservation-heading">
+          <p class="eyebrow">YOUR TABLE IS WAITING</p>
+          <h2>Let's make it<br><em>a beautiful evening.</em></h2>
+          <p>Good food tastes even better together.</p>
+        </div>
+
+        <form class="reservation-form" id="reservationForm">
+          <div class="form-row">
+            <label>
+              Your name
+              <input type="text" name="name" placeholder="Full name" required>
+            </label>
+
+            <label>
+              Email address
+              <input type="email" name="email" placeholder="Your email" required>
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>
+              Date
+              <input type="date" name="date" id="bookingDate" required>
+            </label>
+
+            <label>
+              Time
+              <select name="time" required>
+                <option value="">Choose a time</option>
+                <option>12:00 PM</option>
+                <option>1:00 PM</option>
+                <option>2:00 PM</option>
+                <option>6:00 PM</option>
+                <option>7:00 PM</option>
+                <option>8:00 PM</option>
+                <option>9:00 PM</option>
+                <option>10:00 PM</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            Number of guests
+            <select name="guests" required>
+              <option value="">Select guests</option>
+              <option>1 Guest</option>
+              <option>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4 Guests</option>
+              <option>5 Guests</option>
+              <option>6 Guests</option>
+              <option>7+ Guests</option>
+            </select>
+          </label>
+
+          <button type="submit" class="button button-primary">
+            Request a Reservation ↗
+          </button>
+
+          <p class="form-message" id="formMessage" aria-live="polite"></p>
+          <p class="form-disclaimer">
+            Demo form — no actual booking is submitted.
+          </p>
+        </form>
+      </div>
     </section>
 
+    <!-- CONTACT -->
+
     <section class="contact section" id="contact">
-      <div class="section-label">04 / FIND US</div>
-      <h2>Come on in.</h2>
+      <div class="section-label">05 / FIND US</div>
+
+      <h2>Come on <em>in.</em></h2>
 
       <div class="contact-grid">
         <div>
           <h3>Visit TAVOLA</h3>
           <p>Abu Dhabi, United Arab Emirates</p>
-          <p>Location: Fictional restaurant for this demo</p>
+          <p>Fictional location for this demo</p>
         </div>
 
         <div>
@@ -235,8 +333,10 @@
 
   </main>
 
+  <!-- FOOTER -->
+
   <footer class="footer">
-    <a href="#" class="logo">TAVOLA<span>.</span></a>
+    <a href="#home" class="logo">TAVOLA<span>.</span></a>
     <p>GOOD FOOD. GOOD COMPANY. ITALIAN SOUL.</p>
     <p>© <span id="year"></span> TAVOLA. DEMO WEBSITE.</p>
   </footer>
